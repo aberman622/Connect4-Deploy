@@ -1,0 +1,42 @@
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .click-info {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .player-toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .player-toggle-button.red {
+    background-color: red;
+  }
+  
+  .player-toggle-button.yellow {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .victory-debug-button {
+    margin-top: 20px;
+  }

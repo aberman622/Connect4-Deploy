@@ -1,0 +1,186 @@
+.gameboard-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* Align sidebars and gameboard to the top */
+  padding-top: 60px; 
+}
+
+.red-sidebar, .yellow-sidebar {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  position: relative;
+}
+
+.red-sidebar {
+  transform: translate(-7px,64px); 
+}
+
+.yellow-sidebar {
+  transform: translate(7px,64px); 
+}
+
+.red-sidebar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.red-sidebar-content {
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increase gap for better spacing between items */
+  transform: translateY(-10px);
+
+}
+
+@font-face {
+  font-family: 'Pixel';
+  src: url('../assets/Fonts/ARCADECLASSIC.TTF') format('truetype'); /* Adjust the path */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.red-sidebar-text {
+  font-size: 40px;
+  color: #ebebeb;
+  font-family: 'Pixel', sans-serif; 
+}
+
+.red-sidebar-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.red-sidebar-button img {
+  width: 64px; /* Slightly larger for better fit */
+  height: 64px;
+}
+
+
+.yellow-sidebar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.yellow-sidebar-content {
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increase gap for better spacing between items */
+  transform: translateY(-10px);
+
+}
+
+.yellow-sidebar-text {
+  font-size: 40px;
+  color: #ebebeb;
+  font-family: 'Pixel', sans-serif; /* Use a pixel-style font if desired */
+}
+
+.yellow-sidebar-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.yellow-sidebar-button img {
+  width: 64px; /* Slightly larger for better fit */
+  height: 64px;
+}
+
+.gameboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    position: relative;
+    z-index: 1; 
+  }
+  
+  .top-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 64px); /* Same width as the main grid */
+    gap: 0;
+    height: 64px; /* Same height as the cells in the main grid */
+  }
+  
+  .top-cell {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background-color: transparent; /* Makes the top grid transparent */
+  }
+  
+  .hover-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(7, 64px);
+    gap: 0;
+  }
+  
+  .tile-container {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .tile {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .tile-back,
+  .tile-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gameboard-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .board-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; 
+    transform: scale(1.05);
+  }
+  
+  .top-grid{
+    display: none;
+  }
